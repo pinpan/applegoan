@@ -1,0 +1,142 @@
+﻿<!--SECTION FAQ-->
+
+	<section id="section2" class="cd-section">
+		<div class="container">
+          <div class="row">
+		    <div class="box-content" ng-controller="FAQController">
+		        <h1>Frequently Asked Questions</h1>
+               
+                    <!-- Category Filter -->
+	                <dl class="group">
+                       <dt></dt>
+		                <dd>
+			                <ul class="filter group albumFilter">
+                                <!--<li><a data-hover="Show all" ng-click="getMyCtrlScope().categoryFilter = ''" href="">Show all</a></li>-->
+                                <a class="faqcat" ng-click="getMyCtrlScope().categoryFilter = ''" href="">Show all&nbsp;</a>
+                                <li class="faqcat" ng-repeat="cat in faqCategories">
+                                    <a data-hover="{{cat.description}}" ng-click="getMyCtrlScope().categoryFilter = {category:cat.category}" href="">{{cat.title}}&nbsp;</a>
+                                </li>
+                            </ul>
+		                </dd>
+	                </dl>
+
+                    <div>
+                        <div class="col-md-3"/>
+                        <ul class="col-md-12">
+
+                            <li class="faqcat" ng-repeat="cat in faqCategories | filter:categoryFilter">
+                                <div class="col-md-1"/>
+                                <div class="col-md-2">
+                                    <a data-hover="{{cat.description}}" ng-click="getMyCtrlScope().categoryFilter = {category:cat.category}" href="">{{cat.title}}</a>
+                                </div>
+                                <div class="col-md-12">
+                                    <ul id="faq">
+                                        <ul id="faqItems" class="faq">
+                                            <li class="col-md-12 faqq" ng-repeat="item in cat.faqItems" >
+                                                <a href="" ng-click="showDetail = !showDetail">{{item.question}}</a>
+                                                <div ng-show="showDetail">
+                                                    <div class="col-md-1"/>
+                                                    <div class="col-md-6 faqa">
+                                                        <div ng-bind-html="item.answer | sanitize"></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </div>
+
+                            </li>
+                        </ul>
+                      </div>
+             </div><!--close box content-->
+		  </div>
+      </div>
+
+
+      <div class="parallax2">
+        <div class="overlay-white">
+            <div class="container">
+              <div class="row">
+               <div class="col-md-12">
+               <div id="owl-demo" class="owl-carousel owl-theme">
+ 
+                  <div class="item">
+                            <div class="carousel-desc">
+                                <span class=" icon-anchor"></span>
+                                <h1>What people say</h1>
+                                <p>Fusce risus metus, placerat in <span>consectetur</span> eu, porttitor a est sed sed dolor lorem cras adipiscing</p>
+                                <p>A small <span>creative</span> team, trying to enrich the lives of others</p>
+                                <p class="nm-name">- Brian Rood</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                            <div class="carousel-desc">
+                            <span class=" icon-anchor"></span>
+                                <h1>What people say</h1>
+                                <p>Fusce risus metus, placerat in <span>consectetur</span> eu, porttitor a est sed sed dolor lorem cras adipiscing</p>
+                                <p>A small <span>creative</span> team, trying to enrich the lives of others</p>
+                                <p class="nm-name">- Miki Rood</p>
+                            </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-desc">
+                        <span class=" icon-anchor"></span>
+                            <h1>What people say</h1>
+                            <p>Fusce risus metus, placerat in <span>consectetur</span> eu, porttitor a est sed sed dolor lorem cras adipiscing</p>
+                                <p>A small <span>creative</span> team, trying to enrich the lives of others</p>
+                                <p class="nm-name">- Robert Rood</p>
+                        </div>
+                    </div>
+ 
+                </div>
+		      </div>
+          </div>
+        </div>
+       </div>
+      </div>
+	</section><!-- cd-section -->
+
+    
+    <script>
+        /********************************************
+        CAROUSEL
+        ********************************************/
+        $("#owl-demo").owlCarousel({
+
+            navigation: true, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true
+
+            // "singleItem:true" is a shortcut for:
+            // items : 1, 
+            // itemsDesktop : false,
+            // itemsDesktopSmall : false,
+            // itemsTablet: false,
+            // itemsMobile : false
+
+        });
+    </script>
+    <script>
+        $('.albumFilter li').on("click", function () {
+            $('.albumFilter .current').removeClass('current');
+            $(this).addClass('current');
+        });
+    </script>
+
+    <script type="text/javascript">
+        /********************************************
+        CLOSE PAGE DETAIL
+        ********************************************/
+//        $(document).ready(function () {
+        $(".smooth-redirect").on("click", function (event) {
+                event.preventDefault();
+                linkLocation = this.href;
+                $("body").fadeOut(1000, redirectPage);
+            });
+            function redirectPage() {
+                window.location = linkLocation;
+            }
+//        });
+   </script>
+    
