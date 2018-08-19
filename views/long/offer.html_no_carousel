@@ -1,35 +1,23 @@
 <!-- begin #client -->
-<div id="services" class="content" data-scrollview="true">
-
+<div id="client" class="content" data-scrollview="true">
   <!-- begin content-bg -->
   <div class="content-bg">
     <!-- <img src="img/client-bg.jpg" alt="Client" /> -->
     <!-- <img src="img/api-dev_2.png"  alt="Client"/> -->
   </div>
   <!-- end content-bg -->
-
   <!-- begin container -->
   <div class="container" data-animation="true" data-animation-type="fadeInUp">
-    <h2 class="content-title">Our services
+    <h2 class="content-title">Our Offer
         <br/><img src="img/Under-Construction-Transparent-180x180.png" height="130" width="180"></img>
     </h2>
-
     <!-- begin carousel -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
-
-      <!-- begin carousel-indicators -->
-      <ol class="carousel-indicators">
-          <li data-target="#services" data-slide-to="0" class="active"></li>
-          <li data-target="#services" data-slide-to="1" class=""></li>
-          <li data-target="#services" data-slide-to="2" class=""></li>
-      </ol>
-      <!-- end carousel-indicators -->
-
+    <div class="carousel testimonials slide" data-ride="carousel" id="offer">
       <!-- begin carousel-inner -->
-      <div class="carousel-inner text-center" role="listbox">
+      <div class="carousel-inner text-center">
         <!-- begin item -->
         <div class="item active">
-          <div class="name"> — <span class="text-theme"><h3>UX Design & Testing</h3></span></div>
+          <div class="name"> — <span class="text-theme"><h3>For Banks</h3></span></div>
           <!-- <blockquote> -->
             <!-- <i class="fa fa-quote-left"></i> -->
           <h4>
@@ -42,7 +30,7 @@
         <!-- end item -->
         <!-- begin item -->
         <div class="item">
-          <div class="name"> — <span class="text-theme"><h3>Development</h3></span></div>
+          <div class="name"> — <span class="text-theme"><h3>For Insurance companies</h3></span></div>
           <!-- <blockquote> -->
             <!-- <i class="fa fa-quote-left"></i> -->
           <h4>
@@ -55,12 +43,11 @@
         <!-- end item -->
         <!-- begin item -->
         <div class="item">
-          <div class="name"> — <span class="text-theme"><h3>Architeture</h3></span></div>
+          <div class="name"> — <span class="text-theme"><h3>For Mercants</h3></span></div>
           <!-- <blockquote> -->
             <!-- <i class="fa fa-quote-left"></i> -->
           <h4>
-            Sed tincidunt quis est sed ultrices. Sed feugiat auctor ipsum, sit amet accumsan elit vestibulum<br />
-            fringilla. In sollicitudin ac ligula eget vestibulum.
+            If you need to analyze .
           </h4>
             <!-- <i class="fa fa-quote-right"></i> -->
           <!-- </blockquote> -->
@@ -68,16 +55,26 @@
         <!-- end item -->
       </div>
       <!-- end carousel-inner -->
-      
-      <a class="left carousel-control" href="#services" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+
+
+      <!-- begin carousel-indicators -->
+      <div class="carousel-control">
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#services" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-      </a>
+        </a>
+      </div>
 
+      <ol class="carousel-indicators">
+        <li data-target="#offer" data-slide-to="0" class="active"></li>
+        <li data-target="#offer" data-slide-to="1" class=""></li>
+        <li data-target="#offer" data-slide-to="2" class=""></li>
+      </ol>
+      <!-- end carousel-indicators -->
     </div>
     <!-- end carousel -->
   </div>

@@ -27,10 +27,10 @@ var applegoApp = angular.module('applegoApp', [
   .constant('VERSION_TAG', /*VERSION_TAG_START*/new Date().getTime()/*VERSION_TAG_END*/)
   .constant('LOCALES', {
     'locales': {
-      'cs-cz': 'Česky',
-      'en-us': 'English'
+      'cs_CZ': 'Česky',
+      'en_US': 'English'
     },
-    'preferredLocale': 'en-us'
+    'preferredLocale': 'en_US'
   });
 
   applegoApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
@@ -91,9 +91,19 @@ var applegoApp = angular.module('applegoApp', [
       , abstract: true
     })
     .state ('services', {
-        url: '/services'
-      , data: {pageTitle: 'Services'}
-      , templateUrl: 'views/long/services.html'
+      url: '/services'
+    , data: {pageTitle: 'Services'}
+    , templateUrl: 'views/long/services.html'
+    })
+    .state ('solutions', {
+      url: '/solutions'
+    , data: {pageTitle: 'Solutions'}
+    , templateUrl: 'views/long/solutions.html'
+    })
+    .state ('offer', {
+      url: '/offer'
+    , data: {pageTitle: 'Offer'}
+    , templateUrl: 'views/long/offer.html'
     })
     .state ('about', {
         url: '/about'
@@ -111,7 +121,7 @@ var applegoApp = angular.module('applegoApp', [
       templateUrl: 'views/long/team.html'
     })
     .state ('contact', {
-      url: '/team',
+      url: '/contact',
       data: {pageTitle: 'Applego - Contacts'},
       templateUrl: 'views/long/contact.html'
     })
@@ -132,7 +142,7 @@ var applegoApp = angular.module('applegoApp', [
     }
 
     $translateProvider.useStaticFilesLoader({
-      prefix: 'resources/locale_',
+      prefix: 'resources/locale-',
       suffix: '.json'
     });
     $translateProvider.preferredLanguage(LOCALES.preferredLocale);
@@ -144,9 +154,9 @@ var applegoApp = angular.module('applegoApp', [
   .config(function (tmhDynamicLocaleProvider) {
     tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
   })
-  // .config(function (tmhDynamicLocaleProvider) {
-  //   tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
-  // })
+  .config(function (tmhDynamicLocaleProvider) {
+    tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
+  })
   .filter("sanitize", ['$sce', function($sce) {
     return function(htmlCode){
         return $sce.trustAsHtml(htmlCode);

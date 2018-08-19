@@ -1,62 +1,68 @@
 <!-- begin #header -->
 <nav id="header" class="header navbar navbar-transparent navbar-fixed-top">
     <!-- begin container -->
-    <div>
-		<!-- begin navbar-header -->
-		<div style="margin-left:50px">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			
-			<a ui-sref="home" class="navbar-brand">
-				<span class="brand-logo">
-					<img src="img/applego_serif.png" height="32" width="132"></img>
-				</span>
-			</a>
-		</div>
+    <div class="container" style="border:0px solid;">
+        <!-- begin navbar-header -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <a ui-sref="home" class="navbar-brand">
+            <span class="brand-logo">
+				<!-- <img src="img/applego_serif.png" height="32" width="132"></img> -->
+				<img src="img/applego_logo_en_UK.png" height="32" width="132"></img>
+			</span>
+        </a>
     
         <!-- begin navbar-collapse -->
-		<div>
-			<ul class="nav navbar-nav">
-				<li><a data-hover="{{'views.header.menu.About' | translate}}"  ui-sref="about">{{"views.header.menu.About" | translate}}</a></li>
-				<li><a data-hover="{{'views.header.menu.Services' | translate}}" ui-sref="services">{{"views.header.menu.Services" | translate}}</a></li>
-				<li><a data-hover="{{'views.header.menu.Contact' | translate}}"  ui-sref="contact">{{"views.header.menu.Contact" | translate}}</a></li>
-			</ul>
-		</div>
+        <ul class="nav navbar-nav">
+			<li><a data-hover="{{'views.header.menu.About' | translate}}"    ui-sref="about"><b>{{"views.header.menu.About" | translate}}</b></a></li>
+			<li><a data-hover="{{'views.header.menu.Services' | translate}}" ui-sref="services">{{"views.header.menu.Services" | translate}}</a></li>
+			<li><a data-hover="{{'views.header.menu.Solutions' | translate}}" ui-sref="solutions">{{"views.header.menu.Solutions" | translate}}</a></li>
+			<li><a data-hover="{{'views.header.menu.Offer' | translate}}" ui-sref="offer">{{"views.header.menu.Offer" | translate}}</a></li>
+            <li><a data-hover="{{'views.header.menu.Contact' | translate}}"  ui-sref="contact">{{"views.header.menu.Contact" | translate}}</a></li>
+        </ul>
 
-		<div style="margin-right:50px;">
-			<ul class="nav navbar-nav navbar-right">
-				<li class="divider"></li>
+		<ul class="nav navbar-nav navbar-right">
+			 
+			<li>
+				<a ui-sref="login">
+					<span class="hidden-md hidden-sm hidden-xs">Login</span>
+				</a>
+			</li>
 
-				<!-- <li>
+			<li>
+				<a ui-sref="register">
+					<span class="hidden-md hidden-sm hidden-xs">Register</span>
+				</a>
+			</li>
+
+			<li class="divider"/>
+
+			<li>
+				<div ng-translate-language-select></div>
+			</li>
+
+			<!-- <li class="divider"></li> -->
+			
+			<li ui-sref-active="active">
+					<!-- <span class="hidden-md hidden-sm hidden-xs">Login</span> -->
+					<user-salutation salute="'Hello '" title="'Mr.'" first-name="'Alan'" last-name="'Rickman'"></user-salutation>
+				</a>
+			</li>
+			
+			<li>
 					<form class="navbar-form full-width ng-pristine ng-valid">
 						<input  type="text"   class="form-control" placeholder="Enter keyword">
 						<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
 					</form>
-				</li> -->
-
-				<li>
-					<div ng-translate-language-select></div>
-				</li>
-
-				<li class="divider"></li>
-				
-				<li ui-sref-active="active">
-					<a ui-sref="login">
-						<span class="hidden-md hidden-sm hidden-xs">{{"header.security.SignIn" | translate}}</span>
-						<user-salutation salute="'Hello '" title="'Mr.'" first-name="'Alan'" last-name="'Rickman'"></user-salutation>
-					</a>
-				</li>
-				
-				<li>
-					<a ui-sref="register">
-						<span class="hidden-md hidden-sm hidden-xs">{{"header.security.SignOn" | translate}}</span>
-					</a>
-				</li>
-			</ul>
-		</div>
+			</li>
+			
+			
+		</ul>
+			
 		<!-- end navbar-collapse -->
 		<!-- end navbar-header -->
 		</div>

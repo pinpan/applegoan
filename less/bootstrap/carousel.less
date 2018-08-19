@@ -6,12 +6,14 @@
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .carousel-inner {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 80%;
 
   > .item {
     display: none;
@@ -200,8 +202,8 @@
     //
     // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
     // set alpha transparency for the best results possible.
-    background-color: #000 \9; // IE8
-    background-color: rgba(0,0,0,0); // IE9
+    background-color: #0f0; // IE8
+    background-color: rgba(0,f,0,0); // IE9
   }
   .active {
     margin: 0;

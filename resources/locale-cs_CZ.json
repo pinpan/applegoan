@@ -1,0 +1,20 @@
+{
+    "views.main.Splendid!": "Vyborně!",
+    "directives.language-select.Language": "Jazýk",
+    "views.header.SiteTitle": "Free credit score",
+    "views.header.menu.Home": "Domů",
+    "views.header.menu.Services": "Služby",
+    "views.header.menu.Solutions": "Řešení",
+    "views.header.menu.Offer": "Nabídka",
+    "views.header.menu.FAQ": "FAQ",
+    "views.header.menu.Blog": "Blog",
+    "views.header.menu.Contact": "Kontakt",
+    "views.header.menu.About": "O nás",
+
+    "labels.faq.full":"Frequently Asked Questions",
+
+    "views.header.under-construction":"Stránky jsou ve výstavbě. Prosíme o strpění!",
+
+    "views.home.slogan":"Spolehlivý IT partner pro vaš byznys",
+    "views.home.company_intro":"Applego&trade; je poskytovatel IT konzultačních služeb a vývoj software na míru. Máme ofisy v Hlavním městě a na Praze-východ. <br/> Naš tým ie připraven analyzovat vaše byznys potřeby a navrhnout to správné řešení."
+}

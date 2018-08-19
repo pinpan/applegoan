@@ -113,22 +113,23 @@ Website: http://www.seantheme.com/color-admin-v2.0/frontend/one-page-parallax/
 /* -------------------------------
    1.0 General Reset & Setup
 ------------------------------- */
-html {
-    position: relative;
-    min-height: 100%;
-}
 
 /* 1.1 Reset and Overrides */
 
 body {
     background-color: #fff;
     /* background:url(../img/scorebg_briteness550.jpg) no-repeat center center fixed; */
-    margin: 0 0 150px;
+    
     font-family: 'Open Sans', "Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #707478;
+    color: #327478;
     font-size: 12px;
     opacity: 0.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
+    font-weight:bold;
+}
+.content {
+    background:url(../img/api-dev_3.png) no-repeat fixed; 
+    background-position: 100px 50px;
 }
 .ie8 body {
     font-family: Arial,sans-serif;
@@ -208,7 +209,7 @@ body.page-navbar-fixed-top-sm {
 }
 
 .header.navbar .navbar-nav > li > a {
-    font-size: 16px;
+    font-size: 12px;
     line-height: 20px;
     color: #2d353c;
     font-weight: 600;
@@ -360,13 +361,8 @@ body.page-navbar-fixed-top-sm {
 /* 3.1 General Content Setting */
 
 .content {
-    padding: 60px 15px 100px;
-    background:url(../img/api-dev_3.png) no-repeat fixed; 
-    background-position: 0px 50px;
-    min-height: 750px;
-    /* display: inline-block; */
+    padding: 60px 15px 75px;
 }
-
 .content .content-title {
     text-align: center;
     position: relative;
@@ -388,7 +384,8 @@ body.page-navbar-fixed-top-sm {
 .content .content-desc {
     text-align: center;
     margin-bottom: 60px;
-    color: #242a30;
+    color: #a42a30;
+    /* color: #242a30; */
 }
 .content.has-bg {
     padding-bottom: 60px;
@@ -439,49 +436,6 @@ body.page-navbar-fixed-top-sm {
 
 
 /* -------------------------------
-   13.0 Footer Setting
-------------------------------- */
-
-/* 13.1 Footer Element Setting */
-
-.footer {
-    padding: 10px 0px;
-    left: 0;
-    display: inline-block;
-    /* bottom: 0; */
-    position: absolute;
-    width: 100%;
-    height:150px;
-    background: #082644;
-    text-align: center;
-    box-shadow: inset 0 10px 20px -20px rgba(0,0,0,0.7);
-    -webkit-box-shadow: inset 0 10px 20px -20px rgba(0,0,0,0.7);
-}
-.footer .footer-brand-logo {
-    display: block;
-    margin: 0 auto 10px;
-    width: 40px;
-    /*
-    border: 20px solid;
-    border-color: #4DCACA #31A3A3 #1D8888;
-    border-radius: 4px;
-    */
-}
-.footer .footer-brand {
-    font-size: 24px;
-    color: #2d353c;
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 10px;
-}
-.footer .social-list {
-    margin: 10px 0 0;
-    font-size: 20px;
-}
-
-
-
-/* -------------------------------
    4.0 Home Setting
 ------------------------------- */
 
@@ -494,7 +448,7 @@ body.page-navbar-fixed-top-sm {
 .home-content {
     z-index: 1020;
     position: absolute;
-    top: 70px;//20%;
+    top: 70px;
     left: 0;
     right: 0;
     color: #8F8E8E;
@@ -842,18 +796,18 @@ body.page-navbar-fixed-top-sm {
    11.0 Testimonial Setting
 ------------------------------- */
 
-/* 11.1 Testimonial Element Setting */
-
-.testimonials {
+/* 11.1 Testimonial Element Setting 
+*/
+.myCarousel {
     padding-bottom: 50px;
 }
-.testimonials .item {
+.myCarousel .item {
     padding-top: 15px;
 }
-.testimonials .carousel-indicators {
+.myCarousel .carousel-indicators {
     bottom: 0;
 }
-.testimonials blockquote {
+.myCarousel blockquote {
     border: none;
     text-align: center;
     color: #fff;
@@ -861,40 +815,64 @@ body.page-navbar-fixed-top-sm {
     font-weight: 300;
     margin-bottom: 15px;
 }
-.testimonials blockquote .fa-quote-left,
-.testimonials blockquote .fa-quote-right {
+.myCarousel blockquote .fa-quote-left,
+.myCarousel blockquote .fa-quote-right {
     font-size: 28px;
     position: absolute;
     margin-left: 15px;
     margin-top: 15px;
     color: #8F8E8E;
 }
-.testimonials blockquote .fa-quote-left {
+.myCarousel blockquote .fa-quote-left {
     margin-left: -43px;
     margin-top: -15px;
 }
-.testimonials .name {
+.myCarousel .name {
     color: #fff;
     font-size: 14px;
     margin-bottom: 15px;
 }
-.testimonials .name span {
+.myCarousel .name span {
     margin-left: 5px;
 }
-.testimonials .carousel-indicators li {
+.myCarousel .carousel-indicators li {
     background: rgba(255,255,255,0.4);
     border: none;
     -webkit-transition: all .2s linear;
     -moz-transition: all .2s linear;
     transition: all .2s linear;
 }
-.testimonials .carousel-indicators li:hover,
-.testimonials .carousel-indicators li:focus {
+.myCarousel .carousel-indicators li:hover,
+.myCarousel .carousel-indicators li:focus {
     background: rgba(255,255,255,0.7);
 }
-.testimonials .carousel-indicators li.active {
+.myCarousel .carousel-indicators li.active {
     background: #fff;
 }
+
+
+#myCarousel {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -50px;
+    width: 5%;
+}
+
+.carousel-control.left {
+    margin-left: -25px;
+  }
+  
+  .carousel-control.right {
+    /*margin-right: -25px;*/
+    right: -50px; 
+  }
+
 .carousel-indicators li,
 .carousel-indicators li.active {
     width: 12px;
@@ -991,6 +969,42 @@ body.page-navbar-fixed-top-sm {
 }
 .pricing-table .highlight .price .price-number {
     color: #fff;
+}
+
+
+/* -------------------------------
+   13.0 Footer Setting
+------------------------------- */
+
+/* 13.1 Footer Element Setting */
+
+.footer {
+    padding: 10px 0;
+    background: #242a30;
+    text-align: center;
+    box-shadow: inset 0 10px 20px -20px rgba(0,0,0,0.7);
+    -webkit-box-shadow: inset 0 10px 20px -20px rgba(0,0,0,0.7);
+}
+.footer .footer-brand-logo {
+    display: block;
+    margin: 0 auto 10px;
+    width: 40px;
+    /*
+    border: 20px solid;
+    border-color: #4DCACA #31A3A3 #1D8888;
+    border-radius: 4px;
+    */
+}
+.footer .footer-brand {
+    font-size: 24px;
+    color: #2d353c;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.footer .social-list {
+    margin: 10px 0 0;
+    font-size: 20px;
 }
 
 
