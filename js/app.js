@@ -106,7 +106,12 @@ var applegoApp = angular.module('applegoApp', [
     .state ('offer', {
       url: '/offer'
     , data: {pageTitle: 'Offer'}
-    , templateUrl: 'views/long/offer.html'
+    , templateUrl: 'views/long/offer_no_carousel.html'
+    })
+    .state ('tabtest', {
+      url: '/tabtest'
+    , data: {pageTitle: 'Tabs test'}
+    , templateUrl: 'views/long/tabtest.html'
     })
     .state ('about', {
         url: '/about'
