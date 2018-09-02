@@ -1,0 +1,53 @@
+{
+  "name": "applegoan",
+  "homepage": "https://github.com/pinpan/applegoan",
+  "authors": [
+    "Pavlin <pavlin@applego.com>"
+  ],
+  "description": "applego's angular made home site",
+  "main": "index.html",
+  "keywords": [
+    "API",
+    "IDM",
+    "IAM",
+    "PSD2",
+    "FINANCE",
+    "FINTECH",
+    "ENNOVATION",
+    "DEVELOPMENT",
+    "ANALYSIS",
+    "UX",
+    "BANK",
+    "IC",
+    "INSURANCE"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "^1.4.0",
+    "angular-aria": "^1.4.0",
+    "angular-cookies": "^1.4.0",
+    "angular-dynamic-locale": "^0.1.30",
+    "angular-i18n": "^1.6.9",
+    "angular-material": "^1.0.8",
+    "angular-messages": "^1.7.3",
+    "angular-mocks": "^1.4.0",
+    "angular-resource": "^1.4.0",
+    "angular-route": "^1.4.0",
+    "angular-sanitize": "^1.7.3",
+    "angular-touch": "^1.4.0",
+    "angular-translate-handler-log": "^2.11.0",
+    "angular-translate-loader-static-files": "^2.11.0",
+    "angular-translate-storage-cookie": "~2.11.0",
+    "angular-translate-storage-local": "^2.11.0",
+    "angular-translate": "^2.18.1",
+    "angular-ui-router": "^1.0.20",
+    "bootstrap-sass-official": "^3.2.0"
+  }
+}

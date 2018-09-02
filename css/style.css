@@ -209,9 +209,9 @@ body.page-navbar-fixed-top-sm {
 }
 
 .header.navbar .navbar-nav > li > a {
-    font-size: 12px;
-    line-height: 20px;
-    color: #2d353c;
+    font-size: 16px;
+    line-height: 24px;
+    color:  #87A3B5;/* #2d353c; #87A3B5;*/
     font-weight: 600;
     padding: 15px 15px;
 }
@@ -250,7 +250,7 @@ body.page-navbar-fixed-top-sm {
 
 
 .langbar {
-  paddding: 5px 5px !important;
+  padding: 5px 5px !important;
 }
 
 /* 2.3 Navbar Mobile Toggle */
@@ -424,14 +424,17 @@ body.page-navbar-fixed-top-sm {
 .content.has-bg .container .content-desc {
     color: rgba(255,255,255,0.6);
 }
+
+/*
 .content.has-bg h1,
 .content.has-bg h2,
 .content.has-bg h3,
 .content.has-bg h4,
 .content.has-bg h5,
 .content.has-bg h6 {
-    /*color: #fff;*/
+    / * color: #fff; * /
 }
+*/
 
 
 
@@ -1892,6 +1895,21 @@ a.text-white:focus {
 
 /* 16.3 Component - From Control */
 
+.navbar-form .btn-search {
+    /*position: absolute;*/
+    right: 15px;
+    top: 15px;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    border: none;
+    background: none;
+    -webkit-border-radius: 0 30px 30px 0;
+    -moz-border-radius: 0 30px 30px 0;
+    border-radius: 0 30px 30px 0;
+  }
+  
 .form-control {
     border: 2px solid #ccd0d4;
     -webkit-box-shadow: none;
@@ -3022,18 +3040,4 @@ a.list-group-item.active:focus {
 }
 .theme-panel.active {
     right: 0;
-}
-
-.navbar-form .btn-search {
-  /*position: absolute;*/
-  right: 15px;
-  top: 15px;
-  height: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border: none;
-  background: none;
-  -webkit-border-radius: 0 30px 30px 0;
-  -moz-border-radius: 0 30px 30px 0;
-  border-radius: 0 30px 30px 0;
 }

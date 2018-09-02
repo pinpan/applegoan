@@ -14,8 +14,20 @@
           <br/><img src="img/Under-Construction-Transparent-180x180.png" height="130" width="180"></img>
       </h2>
   
+      <div ng-controller="CarouselCtrl">
+        <carousel interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active1">
+              <img ng-src="{{slide.image}}" style="margin:auto;">
+              <div class="carousel-caption">
+                <h4>Slide {{$index}}</h4>
+                <p>{{slide.text}}</p>
+              </div>
+            </slide>
+          </carousel>
+      </div>
+
       <!-- begin carousel -->
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+      <div id="myCarousel2" class="carousel slide" data-ride="carousel" data-interval="2000">
   
         <!-- begin carousel-indicators -->
         <ol class="carousel-indicators">
@@ -71,11 +83,11 @@ Let us discuss with you your strategy and plans and we may find together best wa
         <!-- end carousel-inner -->
         
         <div class="container">
-          <a class="left carousel-control" href="#solutions" role="button" data-slide="prev">
+          <a class="left carousel-control" ui-sref="#myCarousel2" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="right carousel-control" href="#solutions" role="button" data-slide="next">
+          <a class="right carousel-control" href="myCarousel2" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>

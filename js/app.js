@@ -35,8 +35,6 @@ var applegoApp = angular.module('applegoApp', [
 
   applegoApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/home');
-
     $stateProvider
     // .state('home', {
     //   url: '/home',
@@ -56,12 +54,12 @@ var applegoApp = angular.module('applegoApp', [
       url: '/home'
     , data: {pageTitle: 'Applego - Home'}
     , templateUrl: 'views/short/home.html'
-  })
+    })
 
 
     .state('member', {
-      url: '/member',
-      template: '<div ui-view></div>'
+      url: '/member'
+      //, template: '<div ui-view></div>'
       , views: {
           "header":  {templateUrl: "views/common/header.html"}
         , "login":   {templateUrl: "views/security/login.html"}
@@ -82,7 +80,7 @@ var applegoApp = angular.module('applegoApp', [
 
     .state ('menu', {
         url: '/menu'
-      , template: '<div ui-view></div>'
+      //, template: '<div ui-view></div>'
       , views: {
           "header":    {templateUrl: "views/common/header.html"}
         , "blah": {templateUrl:"views/common/content.html"}
@@ -94,6 +92,11 @@ var applegoApp = angular.module('applegoApp', [
       url: '/services'
     , data: {pageTitle: 'Services'}
     , templateUrl: 'views/long/services.html'
+    })
+    .state ('blog', {
+      url: '/blog'
+    , data: {pageTitle: 'AppBlog'}
+    , templateUrl: 'views/long/blog.html'
     })
     .state ('solutions', {
       url: '/solutions'
@@ -124,8 +127,11 @@ var applegoApp = angular.module('applegoApp', [
       url: '/contact',
       data: {pageTitle: 'Applego - Contacts'},
       templateUrl: 'views/long/contact.html'
-    })
+    });
+
+    $urlRouterProvider.otherwise('/home');
   }]);
+
 
   // Angular debug info
   applegoApp
@@ -204,6 +210,14 @@ applegoApp.run(['$rootScope', '$state', 'setting', function($rootScope, $state, 
             $state.go('log-in');
         }
     });
+
+    $rootScope.$on('$stateNotFound', 
+      function(event, unfoundState, fromState, fromParams){ 
+          console.log(unfoundState.to); // "lazy.state"
+          console.log(unfoundState.toParams); // {a:1, b:2}
+          console.log(unfoundState.options); // {inherit:false} + default options
+      }
+    )
 
     $rootScope.$on("$stateChangeError", console.log.bind(console));
   }]);

@@ -1,7 +1,7 @@
 {
     "views.main.Splendid!": "Splendid!",
-    "views.header.menu.Home": "Home",
-    "directives.language-select.Language": "Language",
+    "views.home.welcome": "Welcome to Applego!",
+     "directives.language-select.Language": "Language",
     "views.header.SiteTitle": "Free credit score",
     "views.header.menu.Home": "Home",
     "views.header.menu.Services": "Services",
@@ -14,6 +14,6 @@
     "labels.faq.full":"Frequently Asked Questions",
     "views.header.under-construction":"Applego.cz is Under Heavy Reconstruction. Please stay tuned.",
     
-    "views.home.slogan":"Reliable IT partner for Your Business",
+    "views.home.slogan":"A Reliable IT partner for Your Business",
     "views.home.company_intro":"Applego&trade; is an IT consulting and development services provider located in Prague, Czech Republic. <br/> Our team is ready do analyze your business needs and to propose adequate solution."
 }

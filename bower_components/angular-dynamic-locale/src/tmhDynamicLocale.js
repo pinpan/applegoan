@@ -34,6 +34,8 @@ angular.module('tmh.dynamicLocale', []).config(['$provide', function($provide) {
     storageFactory = 'tmhDynamicLocaleStorageCache',
     storage,
     storageKey = STORAGE_KEY,
+    storageGet = 'get',
+    storagePut = 'put',
     promiseCache = {},
     activeLocale,
     extraProperties = {};
@@ -59,7 +61,9 @@ angular.module('tmh.dynamicLocale', []).config(['$provide', function($provide) {
             function () {
               if (removed) return;
               removed = true;
-              element.removeChild(script);
+              if (script.parentNode === element) {
+                element.removeChild(script);
+              }
               callback();
             }, 30, false);
         }
@@ -68,13 +72,17 @@ angular.module('tmh.dynamicLocale', []).config(['$provide', function($provide) {
       script.onload = function () {
         if (removed) return;
         removed = true;
-        element.removeChild(script);
+        if (script.parentNode === element) {
+          element.removeChild(script);
+        }
         callback();
       };
       script.onerror = function () {
         if (removed) return;
         removed = true;
-        element.removeChild(script);
+        if (script.parentNode === element) {
+          element.removeChild(script);
+        }
         errorCallback();
       };
     }
@@ -133,7 +141,7 @@ angular.module('tmh.dynamicLocale', []).config(['$provide', function($provide) {
       activeLocale = localeId;
       $rootScope.$evalAsync(function() {
         overrideValues($locale, cachedLocale);
-        storage.put(storageKey, localeId);
+        storage[storagePut](storageKey, localeId);
         $rootScope.$broadcast('$localeChangeSuccess', localeId, $locale);
         deferred.resolve($locale);
       });
@@ -150,7 +158,7 @@ angular.module('tmh.dynamicLocale', []).config(['$provide', function($provide) {
         delete promiseCache[localeId];
 
         $rootScope.$applyAsync(function() {
-          storage.put(storageKey, localeId);
+          storage[storagePut](storageKey, localeId);
           $rootScope.$broadcast('$localeChangeSuccess', localeId, $locale);
           deferred.resolve($locale);
         });
@@ -184,10 +192,18 @@ angular.module('tmh.dynamicLocale', []).config(['$provide', function($provide) {
 
   this.useStorage = function(storageName) {
     storageFactory = storageName;
+    storageGet = 'get';
+    storagePut = 'put';
   };
 
   this.useCookieStorage = function() {
-    this.useStorage('$cookieStore');
+    if (angular.version.minor < 7) {
+      this.useStorage('$cookieStore');
+    } else {
+      this.useStorage('$cookies');
+      storageGet = 'getObject';
+      storagePut = 'putObject';
+    }
   };
 
   this.defaultLocale = function(value) {
@@ -213,7 +229,7 @@ angular.module('tmh.dynamicLocale', []).config(['$provide', function($provide) {
     storage = $injector.get(storageFactory);
     $rootScope.$evalAsync(function() {
       var initialLocale;
-      if ((initialLocale = (storage.get(storageKey) || defaultLocale))) {
+      if ((initialLocale = (storage[storageGet](storageKey) || defaultLocale))) {
         loadLocaleFn(initialLocale);
       }
     });
