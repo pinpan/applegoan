@@ -36,15 +36,15 @@ Website: http://www.seantheme.com/color-admin-v2.0/frontend/one-page-parallax/
 .navbar-nav .dropdown-menu > li > a:focus,
 .pricing-table .price .price-number,
 a {
-    color: #00acac;
+    color: #00508f;
 }
 a:hover,
 a:focus {
-    color: #008a8a;
+    color: #00508f;
 }
 .pricing-table .highlight h3,
 .pace-progress {
-    background: #008a8a;
+    background: #00508f;
 }
 .pricing-table .highlight .price {
     background: #00acac;

@@ -103,10 +103,15 @@ var applegoApp = angular.module('applegoApp', [
     , data: {pageTitle: 'Solutions'}
     , templateUrl: 'views/long/solutions.html'
     })
+    .state ('iam', {
+      url: '/iam'
+    , data: {pageTitle: 'Identity and Access Management'}
+    , templateUrl: 'views/long/iam.html'
+    })
     .state ('offer', {
       url: '/offer'
     , data: {pageTitle: 'Offer'}
-    , templateUrl: 'views/long/offer_no_carousel.html'
+    , templateUrl: 'views/long/offer.html'
     })
     .state ('tabtest', {
       url: '/tabtest'
@@ -128,10 +133,15 @@ var applegoApp = angular.module('applegoApp', [
       data: {pageTitle: 'Applego - Team'},
       templateUrl: 'views/long/team.html'
     })
-    .state ('contact', {
-      url: '/contact',
+    .state ('contactme', {
+      url: '/contactme',
+      data: {pageTitle: 'Get in touch'},
+      templateUrl: 'views/long/contactme.html'
+    })    
+    .state ('contacts', {
+      url: '/contacts',
       data: {pageTitle: 'Applego - Contacts'},
-      templateUrl: 'views/long/contact.html'
+      templateUrl: 'views/long/contacts.html'
     });
 
     $urlRouterProvider.otherwise('/home');

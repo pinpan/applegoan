@@ -1,87 +1,159 @@
 <!-- begin #client -->
 <div id="services" class="content" data-scrollview="true">
 
-  <!-- begin content-bg -->
-  <div class="content-bg">
-    <!-- <img src="img/client-bg.jpg" alt="Client" /> -->
-    <!-- <img src="img/api-dev_2.png"  alt="Client"/> -->
-  </div>
-  <!-- end content-bg -->
-
   <!-- begin container -->
   <div class="container" data-animation="true" data-animation-type="fadeInUp">
-    <h2 class="content-title">Our services
-        <br/><img src="img/Under-Construction-Transparent-180x180.png" height="130" width="180"></img>
-    </h2>
 
-    <!-- begin carousel -->
-    <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="2000">
-
-      <!-- begin carousel-indicators -->
-      <ol class="carousel-indicators">
-          <li data-target="#services" data-slide-to="0" class="active"></li>
-          <li data-target="#services" data-slide-to="1" class=""></li>
-          <li data-target="#services" data-slide-to="2" class=""></li>
-      </ol>
-      <!-- end carousel-indicators -->
-
-      <!-- begin carousel-inner -->
-      <div class="carousel-inner text-center" role="listbox">
-        <!-- begin item -->
-        <div class="item active">
-          <div class="name"> — <span class="text-theme"><h3>UX Design & Testing</h3></span></div>
-          <!-- <blockquote> -->
-            <!-- <i class="fa fa-quote-left"></i> -->
-          <h4>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra, nulla ut interdum fringilla,<br />
-            urna massa cursus lectus, eget rutrum lectus neque non ex.
-          </h4>
-            <!-- <i class="fa fa-quote-right"></i> -->
-          <!-- </blockquote> -->
-        </div>
-        <!-- end item -->
-        <!-- begin item -->
-        <div class="item">
-          <div class="name"> — <span class="text-theme"><h3>Development</h3></span></div>
-          <!-- <blockquote> -->
-            <!-- <i class="fa fa-quote-left"></i> -->
-          <h4>
-            Donec cursus ligula at ante vulputate laoreet. Nulla egestas sit amet lorem non bibendum.<br />
-            Nulla eget risus velit. Pellentesque tincidunt velit vitae tincidunt finibus.
-          </h4>
-            <!-- <i class="fa fa-quote-right"></i> -->
-          <!-- </blockquote> -->
-        </div>
-        <!-- end item -->
-        <!-- begin item -->
-        <div class="item">
-          <div class="name"> — <span class="text-theme"><h3>Architeture</h3></span></div>
-          <!-- <blockquote> -->
-            <!-- <i class="fa fa-quote-left"></i> -->
-          <h4>
-            Sed tincidunt quis est sed ultrices. Sed feugiat auctor ipsum, sit amet accumsan elit vestibulum<br />
-            fringilla. In sollicitudin ac ligula eget vestibulum.
-          </h4>
-            <!-- <i class="fa fa-quote-right"></i> -->
-          <!-- </blockquote> -->
-        </div>
-        <!-- end item -->
+      <div>
+          <h2 class="content-title" title=" Please select appropriate tab based on your industry.">
+                <!-- <img src="img/Under-Construction-Transparent-180x180.png" height="130" width="180"></img>
+                <br/> -->
+              <span>Our services</span>
+              <br/><img src="img/Under-Construction-Transparent-180x180.png" height="130" width="180"></img>
+          </h2>    
       </div>
-      <!-- end carousel-inner -->
-      
-      <!-- <a class="left carousel-control" href="#services" role="button" data-slide="prev"> -->
-        <a class="left carousel-control" data-slide="prev" data-hover="{{'views.header.menu.Services' | translate}}" >
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control"  data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-      </a>
 
-    </div>
-    <!-- end carousel -->
-  </div>
-  <!-- end containter -->
+      <!-- begin row -->
+      <div class="row">
+            <!-- begin col-12 -->
+            <div class="col-md-12">
+                <ul class="nav nav-tabs" id="offerTabs">
+                    <li class="active"><a data-target="#nav-tab-services-busan" data-toggle="tab">Business analysis</a></li>
+                    <li><a data-target="#nav-tab-services-techan" data-toggle="tab">Technical analysis</a></li> 
+                    <li><a data-target="#nav-tab-services-arch" data-toggle="tab">SW Design and archtecture</a></li>
+                    <li><a data-target="#nav-tab-services-dev" data-toggle="tab">SW development</a></li>
+                    <li><a data-target="#nav-tab-services-test" data-toggle="tab">Testing</a></li>
+                    <li><a data-target="#nav-tab-services-uxdx" data-toggle="tab">UX, DX</a></li>
+                    <li><a data-target="#nav-tab-services-support" data-toggle="tab">Support</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="nav-tab-services-busan">
+                        <h3 class="m-t-10">Business analysis</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer ac dui eu felis hendrerit lobortis. Phasellus elementum, nibh eget adipiscing porttitor, 
+                            est diam sagittis orci, a ornare nisi quam elementum tortor. 
+                            Proin interdum ante porta est convallis dapibus dictum in nibh. 
+                            Aenean quis massa congue metus mollis fermentum eget et tellus. 
+                            Aenean tincidunt, mauris ut dignissim lacinia, nisi urna consectetur sapien, 
+                            nec eleifend orci eros id lectus.
+                        </p>
+                        <p class="text-right m-b-0">
+                            <a data-hover="{{'read_more.command.tooltip' | translate}}" ui-sref="busan" class="btn btn-white m-r-5">{{"read_more.command.title" |  translate}}</a>
+                            <a data-hover="{{'contact_me.command.tooltip' | translate}}" ui-sref="contactme" class="btn btn-primary">{{"contact_me.command.title" | translate}}</a>
+                    </p>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-tab-services-techan">
+                        <h3 class="m-t-10">Technical analysis</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer ac dui eu felis hendrerit lobortis. Phasellus elementum, nibh eget adipiscing porttitor, 
+                            est diam sagittis orci, a ornare nisi quam elementum tortor. 
+                            Proin interdum ante porta est convallis dapibus dictum in nibh. 
+                            Aenean quis massa congue metus mollis fermentum eget et tellus. 
+                            Aenean tincidunt, mauris ut dignissim lacinia, nisi urna consectetur sapien, 
+                            nec eleifend orci eros id lectus.
+                        </p>
+                        <p class="text-right m-b-0">
+                            <a data-hover="{{'read_more.command.tooltip' | translate}}" ui-sref="techan" class="btn btn-white m-r-5">{{"read_more.command.title" |  translate}}</a>
+                            <a data-hover="{{'contact_me.command.tooltip' | translate}}" ui-sref="contactme" class="btn btn-primary">{{"contact_me.command.title" | translate}}</a>                            
+                    </p>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-tab-services-arch">
+                        <h3 class="m-t-10">SW Design and archtecture</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer ac dui eu felis hendrerit lobortis. Phasellus elementum, nibh eget adipiscing porttitor, 
+                            est diam sagittis orci, a ornare nisi quam elementum tortor. 
+                            Proin interdum ante porta est convallis dapibus dictum in nibh. 
+                            Aenean quis massa congue metus mollis fermentum eget et tellus. 
+                            Aenean tincidunt, mauris ut dignissim lacinia, nisi urna consectetur sapien, 
+                            nec eleifend orci eros id lectus.
+                        </p>
+                        <p class="text-right m-b-0">
+                            <a data-hover="{{'read_more.command.tooltip' | translate}}" ui-sref="arch" class="btn btn-white m-r-5">{{"read_more.command.title" |  translate}}</a>
+                            <a data-hover="{{'contact_me.command.tooltip' | translate}}" ui-sref="contactme" class="btn btn-primary">{{"contact_me.command.title" | translate}}</a>                            
+                    </p>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-tab-services-dev">
+                        <h3 class="m-t-10">SW Development</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer ac dui eu felis hendrerit lobortis. Phasellus elementum, nibh eget adipiscing porttitor, 
+                            est diam sagittis orci, a ornare nisi quam elementum tortor. 
+                            Proin interdum ante porta est convallis dapibus dictum in nibh. 
+                            Aenean quis massa congue metus mollis fermentum eget et tellus. 
+                            Aenean tincidunt, mauris ut dignissim lacinia, nisi urna consectetur sapien, 
+                            nec eleifend orci eros id lectus.
+                        </p>
+                        <p class="text-right m-b-0">
+                            <a data-hover="{{'read_more.command.tooltip' | translate}}" ui-sref="dev" class="btn btn-white m-r-5">{{"read_more.command.title" |  translate}}</a>
+                            <a data-hover="{{'contact_me.command.tooltip' | translate}}" ui-sref="contactme" class="btn btn-primary">{{"contact_me.command.title" | translate}}</a>                            
+                    </p>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-tab-services-test">
+                        <h3 class="m-t-10">Testing</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer ac dui eu felis hendrerit lobortis. Phasellus elementum, nibh eget adipiscing porttitor, 
+                            est diam sagittis orci, a ornare nisi quam elementum tortor. 
+                            Proin interdum ante porta est convallis dapibus dictum in nibh. 
+                            Aenean quis massa congue metus mollis fermentum eget et tellus. 
+                            Aenean tincidunt, mauris ut dignissim lacinia, nisi urna consectetur sapien, 
+                            nec eleifend orci eros id lectus.
+                        </p>
+                        <p class="text-right m-b-0">
+                            <a data-hover="{{'read_more.command.tooltip' | translate}}" ui-sref="test" class="btn btn-white m-r-5">{{"read_more.command.title" |  translate}}</a>
+                            <a data-hover="{{'contact_me.command.tooltip' | translate}}" ui-sref="contactme" class="btn btn-primary">{{"contact_me.command.title" | translate}}</a>                            
+                    </p>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-tab-services-uxdx">
+                        <h3 class="m-t-10">UX, DX</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer ac dui eu felis hendrerit lobortis. Phasellus elementum, nibh eget adipiscing porttitor, 
+                            est diam sagittis orci, a ornare nisi quam elementum tortor. 
+                            Proin interdum ante porta est convallis dapibus dictum in nibh. 
+                            Aenean quis massa congue metus mollis fermentum eget et tellus. 
+                            Aenean tincidunt, mauris ut dignissim lacinia, nisi urna consectetur sapien, 
+                            nec eleifend orci eros id lectus.
+                        </p>
+                        <p class="text-right m-b-0">
+                            <a data-hover="{{'read_more.command.tooltip' | translate}}" ui-sref="uxdx" class="btn btn-white m-r-5">{{"read_more.command.title" |  translate}}</a>
+                            <a data-hover="{{'contact_me.command.tooltip' | translate}}" ui-sref="contactme" class="btn btn-primary">{{"contact_me.command.title" | translate}}</a>                            
+                    </p>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-tab-services-support">
+                        <h3 class="m-t-10">Support</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer ac dui eu felis hendrerit lobortis. Phasellus elementum, nibh eget adipiscing porttitor, 
+                            est diam sagittis orci, a ornare nisi quam elementum tortor. 
+                            Proin interdum ante porta est convallis dapibus dictum in nibh. 
+                            Aenean quis massa congue metus mollis fermentum eget et tellus. 
+                            Aenean tincidunt, mauris ut dignissim lacinia, nisi urna consectetur sapien, 
+                            nec eleifend orci eros id lectus.
+                        </p>
+                        <p class="text-right m-b-0">
+                            <a data-hover="{{'read_more.command.tooltip' | translate}}" ui-sref="support" class="btn btn-white m-r-5">{{"read_more.command.title" |  translate}}</a>
+                            <a data-hover="{{'contact_me.command.tooltip' | translate}}" ui-sref="contactme" class="btn btn-primary">{{"contact_me.command.title" | translate}}</a>                            
+                    </p>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- end col-12 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end containter -->            
 </div>
 <!-- end #client -->
+

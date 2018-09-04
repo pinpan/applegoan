@@ -7,13 +7,20 @@
     "views.header.menu.Services": "Services",
     "views.header.menu.Solutions": "Solutions",
     "views.header.menu.Offer": "Offer",
-    "views.header.menu.Contact": "Contact",
+    "views.header.menu.Contacts": "Contacts",
     "views.header.menu.Blog": "Blog",
     "views.header.menu.Team": "Team",
     "views.header.menu.About": "About",
     "labels.faq.full":"Frequently Asked Questions",
-    "views.header.under-construction":"Applego.cz is Under Heavy Reconstruction. Please stay tuned.",
+    "views.header.under-construction":"Applego.cz is Under Heavy (Re-)construction. Please stay tuned.",
     
-    "views.home.slogan":"A Reliable IT partner for Your Business",
-    "views.home.company_intro":"Applego&trade; is an IT consulting and development services provider located in Prague, Czech Republic. <br/> Our team is ready do analyze your business needs and to propose adequate solution."
+    "views.home.slogan":"IT Partner for Your Business Innovation",
+    "views.home.company_intro":"Applego&trade; is an IT consulting and development services provider located in Prague, Czech Republic. <br/> Our team is ready do analyze your business needs and to propose adequate solution.",
+    
+    "read_more.command.tooltip": "Read more about How can we help you with {Identity and Access Management solution.}",
+    "read_more.command.title": "Read more...",
+    "read_more.command": "read_more",
+    "contact_me.command.tooltip": "Let's get in touch to discuss your needs and how can we help.",
+    "contact_me.command.title": "Contact me, please!",
+    "contact_me.command": "contact_me"
 }
