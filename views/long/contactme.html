@@ -29,16 +29,24 @@
                         <input type="text" class="form-control" placeholder="Email address" />
                     </div>
                 </div>
-                <label class="control-label">Re-enter Email</label>
-                <div class="row m-b-15">
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" placeholder="Re-enter email address" />
+                <!-- <label class="control-label">Registration</label> -->
+                <!-- <div class="checkbox m-b-30"> -->
+                    <!-- <label> -->
+                        <input type="checkbox" ng-model="doRegister"/> I want to register and have access to premium content.
+                    <!-- </label> -->
+                <!-- </div> -->
+                <div>
+                    <label class="control-label">User name</label>
+                    <div class="row m-b-15" >
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" ng-disabled="doRegister" placeholder="Bill Gates" />
+                        </div>
                     </div>
-                </div>
-                <label class="control-label">Password</label>
-                <div class="row m-b-15">
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" placeholder="Password" />
+                    <label class="control-label">Password</label>
+                    <div class="row m-b-15">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" ng-disabled="doRegister" placeholder="Password" />
+                        </div>
                     </div>
                 </div>
 
@@ -47,13 +55,15 @@
                         <input type="checkbox" /> By clicking Sign Up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data Policy</a>, including our <a href="#">Cookie Use</a>.
                     </label>
                 </div>
+
                 <div class="register-buttons">
                     <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
                 </div>
                 <div class="m-t-20 m-b-40 p-b-40">
-                    Already a member? Click <a ui-sref="member.login.v3">here</a> to login.
+                    Already registered? Click <a ui-sref="member.login.v3">here</a> to login.
                 </div>
                 <hr />
+
                 <p class="text-center text-inverse">
                     &copy; Applego All Right Reserved 2016
                 </p>

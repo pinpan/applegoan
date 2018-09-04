@@ -25,10 +25,11 @@ angular.module('applegoApp')
               'ng-options="localesDisplayName for localesDisplayName in localesDisplayNames"'+
               'ng-change="changeLanguage(currentLocaleDisplayName)">'+
               '</select>'+
+              href="javascript:;"
             */
             +'<ul  class="nav navbar-nav navbar-left langbar">'
             +'<li ng-repeat="ldn in localesCodes" >'
-            +'<a href="javascript:;" ng-click="changeLanguage(ldn)" class="langbar">'
+            +'<a  href="" ng-click="changeLanguage(ldn)" class="langbar">'
             +'<img src="img/{{ldn}}.svg" alt="{{ldn}}" width="16px"/>'
             +'</a>'
             +'</li>'

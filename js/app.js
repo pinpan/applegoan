@@ -36,20 +36,7 @@ var applegoApp = angular.module('applegoApp', [
   applegoApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
-    // .state('home', {
-    //   url: '/home',
-    //   views: {
-    //       "header":    {templateUrl: "views/common/header.html"}
-    //     , "footer":    {templateUrl: "views/common/footer.html"}
-    //     , "home":      {templateUrl: "views/short/home.html"}
-    //     , "contact":   {templateUrl: "views/short/contact.html"}
-    //     , "team":      {templateUrl: "views/short/team.html"}
-    //     , "services":  {templateUrl: "views/short/services.html"}
-    //     , "faq":       {templateUrl: "views/short/faq.html"}
-    //   },
-    //   abstract: false
-    // })
-
+    
     .state ('home', {
       url: '/home'
     , data: {pageTitle: 'Applego - Home'}
@@ -59,7 +46,6 @@ var applegoApp = angular.module('applegoApp', [
 
     .state('member', {
       url: '/member'
-      //, template: '<div ui-view></div>'
       , views: {
           "header":  {templateUrl: "views/common/header.html"}
         , "login":   {templateUrl: "views/security/login.html"}
