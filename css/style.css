@@ -113,7 +113,27 @@ Website: http://www.seantheme.com/color-admin-v2.0/frontend/one-page-parallax/
 /* -------------------------------
    1.0 General Reset & Setup
 ------------------------------- */
+/*
+.vc_row.overlayHead:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.67);
+    background-image: url(images/bg-overall.png);
+    margin: auto;
+    min-height: 600px;
+    -moz-background-size: 4px;
+    background-size: 4px;
+    height: 100%;
+    display: block
+}
 
+
+*/
 /* 1.1 Reset and Overrides */
 
 body {
@@ -128,9 +148,10 @@ body {
     font-weight:bold;
 }
 .content {
-    background:url(../img/api-dev_3.png) no-repeat fixed; 
+    /* background:url(../img/api-dev_3.png) no-repeat fixed;  */
     background-position: 100px 50px;
 }
+
 .ie8 body {
     font-family: Arial,sans-serif;
 }
@@ -278,7 +299,7 @@ body.page-navbar-fixed-top-sm {
 }
 .header.navbar.navbar-transparent .navbar-nav > li > a,
 .header.navbar.navbar-inverse .navbar-nav > li > a {
-    color: #8F8E8E;
+    color: rgb(8, 43, 77);
 }
 .header.navbar.navbar-transparent .brand-text,
 .header.navbar.navbar-inverse .brand-text {
@@ -425,6 +446,9 @@ body.page-navbar-fixed-top-sm {
     color: rgba(255,255,255,0.6);
 }
 
+.content.contacts {
+    left:500;
+}
 /*
 .content.has-bg h1,
 .content.has-bg h2,
@@ -982,6 +1006,9 @@ body.page-navbar-fixed-top-sm {
 /* 13.1 Footer Element Setting */
 
 .footer {
+    clear:both;
+    z-index:10;
+    position:relative;
     padding: 10px 0;
     background: #242a30;
     text-align: center;
@@ -3040,4 +3067,21 @@ a.list-group-item.active:focus {
 }
 .theme-panel.active {
     right: 0;
+}
+
+/* App Specific */
+#mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+}
+
+#mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
 }
