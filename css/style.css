@@ -203,9 +203,9 @@ p {
 
 /* 1.2 Page Setting */
 
-body.page-navbar-fixed-top {
+/*body.page-navbar-fixed-top {
     padding-top: 70px;
-}
+}*/
 body.page-navbar-fixed-top-sm {
     padding-top: 51px;
 }

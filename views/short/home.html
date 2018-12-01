@@ -1,7 +1,7 @@
 <!-- begin #home -->
 	
   
-<div id="home" class="content has-bg home">
+<div id="home" class="content has-bg">
   <!-- begin container -->
   <div class="container home-content">
     <!-- <h1 class="text-blue header-text">@pplego</h1> -->
@@ -10,13 +10,21 @@
       <center>
           <p><marquee>Latest News: WEBSITE IS STILL UNDER MAINTENANCE!</marquee></p>
       </center>
-  </div>
-  
+    </div>
+
     <!-- <h4>{{"views.home.welcome" | translate}}</h4> -->
     <br />
     <!-- <img src="img/PSD2.png" alt="PSD2" style="float: left;left: ;;"/> -->
     <!-- <img src="img/puzzle_plain2.png"/> -->
-    <img src="img/values-puzzle.svg" alt="Our Values" width="400px" height="400px"/>
+    <img src="img/values-puzzle.svg" alt="Our Values" width="400px" height="400px" usemap="#planetmap">
+
+      <map name="planetmap">
+        <area shape="rect"   coords="0,0,82,126" href="views/long/iam.htm" alt="Sun">
+        <area shape="circle" coords="90,58,3" href="views/long/api.htm" alt="Mercury">
+        <area shape="circle" coords="124,58,8" href="views/long/bc.htm" alt="Venus">
+      </map>
+    </img>
+
     <br />
     <!-- <br /> -->
     <!-- <h4>{{"views.home.slogan" | translate}}</h4> -->
@@ -28,7 +36,7 @@
     <br />
     <br />
     
-    or <a href="#">subscribe</a> newsletter
+    <!-- or <a href="#">subscribe</a> newsletter -->
   </div>
   <!-- end container -->
 </div>
